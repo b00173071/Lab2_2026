@@ -119,10 +119,18 @@ public class ListReferenceBased implements ListInterface
     head = null;
     numItems = 0;
   } // end removeAll
-
-  public void displayList() {
-	  
-  }
+  
+	public static void displayList(ListReferenceBased myList) {
+		if (myList != null)
+		{
+		Node first = myList.head.getNext();
+		Node curr = first;
+		do {
+		System.out.println(curr.getItem());
+		curr = curr.getNext();
+		} while (curr !=first);
+		}
+	}
   
   public String listLongest() {
 	return null;
