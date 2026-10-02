@@ -14,7 +14,7 @@ public class TestReferenceBased {
 		
 		System.out.println("The size of the list is: " + myList.size());
 		
-		System.out.println(myList.listLongest());
+		System.out.println("Longest string: " + myList.listLongest());
 
 	}
 }

@@ -132,6 +132,24 @@ public class ListReferenceBased implements ListInterface
 	}
   
   public String listLongest() {
-	return null;
-  }
+	  if (head == null) {
+	  return null; // this is just for an empty list
+	  }
+	  Node curr = head;
+	  String longest = (String) curr.getItem();
+
+	  curr = curr.getNext();
+
+	  while (curr != null) {
+	  String currentString = (String) curr.getItem();
+
+	  if (currentString.length() > longest.length()) {
+	  longest = currentString;
+	  }
+
+	  curr = curr.getNext();
+	  }
+
+	  return longest;
+	  }
 } // end ListReferenceBased
