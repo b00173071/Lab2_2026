@@ -9,9 +9,8 @@ public class TestReferenceBased {
 		myList.add(2, "orange");
 		myList.add(3, "54");
 		
-		System.out.println(myList.get(0));
 		
-		ListReferenceBased.displayList(myList);
+		myList.displayList();
 		
 		System.out.println("The size of the list is: " + myList.size());
 		

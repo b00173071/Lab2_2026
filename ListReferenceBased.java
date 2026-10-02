@@ -120,16 +120,15 @@ public class ListReferenceBased implements ListInterface
     numItems = 0;
   } // end removeAll
   
-	public static void displayList(ListReferenceBased myList) {
-		if (myList != null)
-		{
-		Node first = myList.head.getNext();
-		Node curr = first;
-		do {
-		System.out.println(curr.getItem());
-		curr = curr.getNext();
-		} while (curr !=first);
-		}
+  public void displayList() {
+	  Node curr = head;
+	  
+	  while (curr != null) {
+	  System.out.print(curr.getItem() + " ");
+	  curr = curr.getNext();
+	  }
+	  
+	  System.out.println();
 	}
   
   public String listLongest() {
